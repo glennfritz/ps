@@ -18,7 +18,7 @@
                 <div class="row">
                     <div class="col-3 form-group">
                         <label>Amount</label>
-                        <input type="number" autocomplete="off" value="{{old('amount')}}"  name="amount" placeholder="" class="form-control">
+                        <input type="number"  value="{{old('amount')}}"  name="amount" placeholder="" class="form-control">
                     </div>
                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                         <label>Expense</label>
@@ -42,7 +42,7 @@
 
                     <div class="col-xl-3 col-lg-6 col-12 form-group">
                         <label>Date</label>
-                        <input name="date" autocomplete="off" type="text" placeholder="dd/mm/yy" class="form-control air-datepicker" data-position="bottom right">
+                        <input name="date"  type="text" placeholder="dd/mm/yy" class="form-control air-datepicker" data-position="bottom right">
                     </div>
                     <div class="col-12 form-group">
                         <label>Motive</label>

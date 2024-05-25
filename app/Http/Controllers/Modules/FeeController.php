@@ -123,7 +123,7 @@ class FeeController extends Controller{
     }
 
     public function monthlyReport(Request $request){
-    
+
        $month = Carbon::now()->month;
         $day = Carbon::now()->day;
         $year = Carbon::now()->year;
@@ -131,7 +131,7 @@ class FeeController extends Controller{
         if($request->month){
             $month = $request->month;
         }
-       
+
         $data['day'] = $day;
         $data['month'] = $month;
         $data['year'] = $year;
@@ -376,6 +376,29 @@ class FeeController extends Controller{
         }else {
             return view('fees.income')->with($data);
         }
+    }
+
+    public function monthlyReceipt(Request $request){
+
+        $month = Carbon::now()->month;
+        $year = Carbon::now()->year;
+
+        if($request->month){
+            $month = $request->month;
+        }
+
+        if($request->year){
+            $year = $request->year;
+        }
+
+        $data['month'] = $month;
+        $data['year'] = $year;
+
+
+        $data['fees'] = \App\StudentFeePayment::whereMonth('created_at', '=', $month)->whereYear('created_at','=', $year)->get();
+
+       // dd($data['fees']);
+        return view('fees.month_report')->with($data);
     }
 
 }

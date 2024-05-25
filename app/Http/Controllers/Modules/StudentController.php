@@ -186,7 +186,7 @@ class StudentController extends Controller{
 
                 $newClass = $class->parent;
 
-               if(!$class->students($request->next_year)->contains($student)){
+               if(!$this->isinClass($class->students($request->next_year), $student)){
                    $studentClass = \App\StudentsClass::create([
                        'student_id'=> $student->id,
                        'class_id'=> getSection($request->class, $request->next_year)->id
@@ -249,5 +249,18 @@ class StudentController extends Controller{
        }
 
          return redirect()->back();
+    }
+
+    private function isinClass($students, $student)
+    {
+        $bool = false;
+        foreach($students as $stud){
+            if($student->id == $stud->id){
+                $bool = true;
+                break;
+            }
+        }
+
+        return $bool;
     }
 }

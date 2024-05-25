@@ -128,6 +128,9 @@
                             <a href="{{route('fee')}}" class="nav-link"><i class="flaticon-technological"></i><span>Fees & Expenses</span></a>
                             <ul class="nav sub-group-menu">
                                 <li class="nav-item">
+                                    <a href="{{route('fee')}}" class="nav-link"><i class="fas fa-angle-right"></i>Today's Fee</a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="{{route('expenses.type.post')}}" class="nav-link"><i class="fas fa-angle-right"></i>Expense Type</a>
                                 </li>
                                 <li class="nav-item">
@@ -162,6 +165,9 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{route('fee.monthly.report')}}" class="nav-link"><i class="fas fa-angle-right"></i>Monthly Report</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{route('fee.monthly.receipt')}}" class="nav-link"><i class="fas fa-angle-right"></i>Monthly Receipt</a>
                                 </li>
                             </ul>
                         </li>

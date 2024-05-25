@@ -9,7 +9,7 @@
                     <h3>Add New Students</h3>
                 </div>
             </div>
-            <form class="new-added-form" method="post"  enctype="multipart/form-data" action="{{route('student.store')}}">
+            <form class="new-added-form" method="post"   action="{{route('student.store')}}">
                 @csrf
                 <div class="row">
                     <div class="col-xl-3 col-lg-6 col-12 form-group">

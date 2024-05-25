@@ -85,6 +85,7 @@ class ResultController extends Controller{
             }
         }
     }
+
     public function resultPost(Request $request, $slug){
         $student = \App\Student::whereSlug($slug)->first();
         if($student == null){
@@ -98,6 +99,7 @@ class ResultController extends Controller{
             $request->session()->flash('error',"Student was not part of this session");
             return redirect()->back();
         }
+
         $data['student'] = $student;
         $data['section'] = $class->class->section->id;
         $data['year'] = \App\Session::find($request->get('year'));
@@ -109,6 +111,7 @@ class ResultController extends Controller{
             return view('result.primary_report_card')->with($data);
         }
     }
+
     public function edit(Request $request, $slug){
         $student = \App\Student::whereSlug($slug)->first();
         if($student == null){
@@ -163,7 +166,7 @@ class ResultController extends Controller{
         }
 
         foreach(\App\Section::find($class->section->id)->subjects as $subject) {
-            $student->saveResult($request->year, $request->sequence,$subject->id, $request->get('mark'.$subject->id), $subject->total);
+            $student->saveResult($request->year, $request->sequence,$subject->id, $request->get('mark'.$subject->id), $subject->score);
         }
 
 
@@ -228,8 +231,14 @@ class ResultController extends Controller{
     }
 
     public function ranksheet(Request $request){
-        $student = \Auth::user()->class(getYear())->student;
-        if($student->count() == 0){
+        $student = \Auth::user()->class(request('year',getYear()))->student()->Join('results',['students.id'=>'results.student_id'])
+            ->selectRaw('students.id, students.name, COALESCE(sum(results.mark),0) total_mark, COALESCE(sum(results.total),0) total')
+            ->where(['results.year_id'=>request('year',getYear()), 'results.sequence_id'=>request('sequence',1)])
+            ->groupBy('students.id', 'students.name','students_classes.class_id','students_classes.student_id')
+            ->orderBy('total_mark', 'DESC')
+            ->get();
+
+        if($student->count() > 0){
             $data['students'] = $student;
         }else{
             $data['students'] = [];

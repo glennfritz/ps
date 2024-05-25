@@ -18,7 +18,7 @@
                     <h3>Today Fee Collected</h3>
                 </div>
                 <div class="dropdown">
-                    <a href="{{route('fee.student')}}?action=fee" class="fw-btn-fill btn-gradient-yellow">Collect Fee</a>
+                    <a href="{{route('fee.student')}}?action=fee" class="fw-btn-fill btn-gradient-yellow">{{__('index.Collect Fee')}}</a>
                 </div>
             </div>
             <div class="table-responsive">
@@ -35,7 +35,15 @@
                     </tr>
                     </thead>
                     <tbody>
+                        @php
+                          $total = 0;
+                        @endphp
+
                         @foreach($fees as $fee)
+                            @php
+                                $total += $fee->amount;
+                            @endphp
+
                             <tr>
                                 <td>{{$fee->student->name}}</td>
                                 <td>{{($fee->student->class($fee->session->id))?$fee->student->class($fee->session->id)->byLocale()->name:''}}</td>
@@ -56,6 +64,11 @@
                                 </td>
                             </tr>
                         @endforeach
+
+                        <tr>
+                            <td colspan="2" class="font-bold">Total : </td>
+                            <td colspan="5" class="font-bold">{{$total}}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

@@ -135,27 +135,5 @@
 
 @section('script')
     <script src="{{asset('public/assets/js')}}/jquery.dataTables.min.js"></script>
-    <script>
-        function print(id) {
 
-            var printContents = $('#'+id).html();
-            w = window.open();
-            w.document.write('<html><head>');
-            w.document.write('<link rel="stylesheet" href="{{asset('public/assets/css')}}/template.css" type="text/css" />');
-            w.document.write('</head><body>');
-            w.document.write('<div class="receipt"><div class="mainbox">');
-            w.document.write(printContents);
-            w.document.write('</div>');
-            w.document.write('<div class="mainbox">');
-            w.document.write(printContents);
-            w.document.write('</div></div>');
-            w.document.write('</body>');
-           w.document.write('<scr' + 'ipt type="text/javascript">' + 'window.onload = function() { window.print(); window.close(); };' + '</sc' + 'ript>');
-            w.document.write('</html>');
-            w.document.close();
-            w.focus();
-            return true;
-        }
-
-    </script>
 @endsection

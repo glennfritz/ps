@@ -15,8 +15,30 @@
             <div class="card dashboard-card-eleven">
                 <div class="card-body">
                     <div class="heading-layout1">
-                        <div class="item-title">
-                            <h3>All Pupil</h3>
+                        <div class="item-title w-100 align-items-center d-flex">
+                            <form class="ml-4 w-100" method="get" action="">
+                                @csrf
+                                <div class="row d-flex gutters-8 justify-content-between">
+                                    <div class="col-md-4 col-12 form-group">
+                                        <select name="year" class="select2">
+                                            @foreach(\App\Session::all() as $session)
+                                                <option {{(request('year',getYear()) == $session->id)?'selected':''}} value="{{$session->id}}">{{$session->name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4 col-12 form-group">
+                                        <select name="sequence" class="select2">
+                                            @foreach(\App\Sequence::all() as $session)
+                                                <option {{(request('sequence',getTerm()) == $session->id)?'selected':''}} value="{{$session->id}}">{{$session->name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4  form-group">
+                                        <button type="submit" class="fw-btn-fill btn-gradient-yellow">Get</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <div class="table-box-wrap">
@@ -24,20 +46,19 @@
                             <table class="table display data-table text-nowrap">
                                 <thead>
                                 <tr>
-                                    <th>Name</th
-                                    <th>Gender</th>
+                                    <th>Rank</th>
+                                    <th>Name</th>
                                     <th>Average</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                   @if(\Auth::user()->class(getYear()))
-                                       @foreach(\Auth::user()->class(getYear())->student as $student )
-                                           <tr>
-                                               <td>{{$student->name}}</td>
-                                               <td>{{$student->average(getYear(),getTerm())}}</td>
-                                          </tr>
-                                       @endforeach
-                                   @endif
+                                   @foreach($students as $k=>$student )
+                                       <tr>
+                                           <td>{{$k+1 }}</td>
+                                           <td>{{$student->name}}</td>
+                                           <td>{{$student->total_mark/$student->total * 20}}</td>
+                                      </tr>
+                                   @endforeach
                                 </tbody>
                             </table>
                         </div>
