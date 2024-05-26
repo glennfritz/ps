@@ -5,11 +5,11 @@
         Expenses between {{request('daterange')}}
     @else
         Todays Expenses
-    @endif    
+    @endif
 @endsection
 
 @section('style')
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/jquery.dataTables.min.css">
 @endsection
 
 @section('section')
@@ -83,7 +83,7 @@
 @endsection
 
 @section('script')
-    <script src="{{asset('public/assets/js')}}/jquery.dataTables.min.js"></script>
+    <script src="{{asset('assets/js')}}/jquery.dataTables.min.js"></script>
     <script>
         $(function() {
             $('input[name="daterange"]').daterangepicker({
@@ -99,12 +99,12 @@
             var title = $('#title').html();
             w = window.open();
             w.document.write('<html><head>');
-            w.document.write('<link rel="stylesheet" href="{{asset('public/assets/css')}}/bootstrap.min.css" type="text/css" />');
+            w.document.write('<link rel="stylesheet" href="{{asset('assets/css')}}/bootstrap.min.css" type="text/css" />');
             w.document.write('<style>');
             w.document.write('#DataTables_Table_0_filter{display: none;} #query {display: none ;} form {display: none ;} button {display: none ;}input {display: none; } .btn{display :none;}a{display: none;}');
             w.document.write('</style>');
             w.document.write('</head><body>');
-            w.document.write('<img class="image-fluid" src="{{asset('public/assets/img')}}/header.png" />');
+            w.document.write('<img class="image-fluid" src="{{asset('assets/img')}}/header.png" />');
             w.document.write('<table>');
             w.document.write(printContents);
             w.document.write('</table>');

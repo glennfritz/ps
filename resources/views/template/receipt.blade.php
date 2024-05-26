@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Receipt</title>
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/template.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/template.css">
 </head>
 
 <!---

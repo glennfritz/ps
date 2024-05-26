@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Receipt</title>
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/template.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/template.css">
 </head>
 
 <body onload="window.print();">
@@ -14,7 +14,7 @@
 
         <div class="eachrec">
             <div style="height:120px; width:95% " >
-                <img src="{{asset('public/assets/img')}}/header.png" />
+                <img src="{{asset('assets/img')}}/header.png" />
             </div>
             <div style=" float:left; width:550px; margin-top:17px;TEXT-ALIGN:CENTER;  height:34px;
 font-size:24px; ">
@@ -89,7 +89,7 @@ font-size:13px; ">
 
         <div class="eachrec">
             <div style="height:120px; width:95% " >
-                <img src="{{asset('public/assets/img')}}/header.png" />
+                <img src="{{asset('assets/img')}}/header.png" />
             </div>
             <div style=" float:left; width:550px; margin-top:17px;TEXT-ALIGN:CENTER;  height:34px;
 font-size:24px; ">

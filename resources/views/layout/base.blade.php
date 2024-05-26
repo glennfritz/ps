@@ -7,19 +7,19 @@
     <title>{{env('APP_NAME','Laravel')}}  @yield('title')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('public/assets/img')}}/favicon.png">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/normalize.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/main.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/bootstrap.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/all.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/fonts')}}/flaticon.css">
-    <link rel="stylesheet" href="{{asset('public/assets')}}/toastr/toastr.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/animate.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/select2.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/datepicker.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img')}}/favicon.png">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/normalize.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/main.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/all.min.css">
+    <link rel="stylesheet" href="{{asset('assets/fonts')}}/flaticon.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/toastr/toastr.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/animate.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/select2.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/datepicker.min.css">
     @yield('style')
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/style.css">
-    <script src="{{asset('public/assets/js')}}/modernizr-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{asset('assets/css')}}/style.css">
+    <script src="{{asset('assets/js')}}/modernizr-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -29,7 +29,7 @@
         <div class="nav-bar-header-one">
             <div class="header-logo">
                 <a href="{{route('dashboard')}}">
-                    <img style="height :50px;" src="{{asset('public/assets/img')}}/logo.png" alt="logo">
+                    <img style="height :50px;" src="{{asset('assets/img')}}/logo.png" alt="logo">
                 </a>
             </div>
             <div class="toggle-button sidebar-toggle">
@@ -115,7 +115,7 @@
         <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
             <div class="mobile-sidebar-header d-md-none">
                 <div class="header-logo">
-                    <a href="{{route('dashboard')}}"><img style="height: 45px;" src="{{asset('public/assets/img')}}/logo1.png" alt="logo"></a>
+                    <a href="{{route('dashboard')}}"><img style="height: 45px;" src="{{asset('assets/img')}}/logo1.png" alt="logo"></a>
                 </div>
             </div>
             <div class="sidebar-menu-content">
@@ -393,16 +393,16 @@
 </div><!-- .footer-bar -->
 </footer><!-- .site-footer -->
 
-<script src="{{asset('public/assets/js')}}/jquery-3.3.1.min.js"></script>
-<script src="{{asset('public/assets/js')}}/plugins.js"></script>
-<script src="{{asset('public/assets/js')}}/popper.min.js"></script>
-<script src="{{asset('public/assets/js')}}/bootstrap.min.js"></script>
-<script src="{{asset('public/assets/js')}}/moment.min.js"></script>
-<script src="{{asset('public/assets/js')}}/jquery.scrollUp.min.js"></script>
-<script src="{{asset('public/assets/js')}}/main.js"></script>
-<script src="{{asset('public/assets')}}/toastr/toastr.min.js"></script>
-<script src="{{asset('public/assets/js')}}/select2.min.js"></script>
-<script src="{{asset('public/assets/js')}}/datepicker.min.js"></script>
+<script src="{{asset('assets/js')}}/jquery-3.3.1.min.js"></script>
+<script src="{{asset('assets/js')}}/plugins.js"></script>
+<script src="{{asset('assets/js')}}/popper.min.js"></script>
+<script src="{{asset('assets/js')}}/bootstrap.min.js"></script>
+<script src="{{asset('assets/js')}}/moment.min.js"></script>
+<script src="{{asset('assets/js')}}/jquery.scrollUp.min.js"></script>
+<script src="{{asset('assets/js')}}/main.js"></script>
+<script src="{{asset('assets')}}/toastr/toastr.min.js"></script>
+<script src="{{asset('assets/js')}}/select2.min.js"></script>
+<script src="{{asset('assets/js')}}/datepicker.min.js"></script>
 <script>
     @if(Session::has('success'))
         toastr.success('{{Session::get('success')}}');

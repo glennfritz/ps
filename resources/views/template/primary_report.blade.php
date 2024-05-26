@@ -1,5 +1,5 @@
 <div style="height:120px; width:95% " >
-    <img src="{{asset('public/assets/img')}}/header.png" />
+    <img src="{{asset('assets/img')}}/header.png" />
 </div>
 <h3>{{$title}}</h3>
 <div class="heading-layout1">

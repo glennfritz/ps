@@ -5,7 +5,7 @@
 @endsection
 
 @section('style')
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/jquery.dataTables.min.css">
 @endsection
 
 @section('section')
@@ -167,9 +167,9 @@
 @endsection
 
 @section('script')
-    <script src="{{asset('public/assets/js')}}/jquery.dataTables.min.js"></script>
-    <script src="{{asset('public/assets/js')}}/jquery.counterup.min.js"></script>
-    <script src="{{asset('public/assets/js')}}/moment.min.js"></script>
-    <script src="{{asset('public/assets/js')}}/jquery.waypoints.min.js"></script>
+    <script src="{{asset('assets/js')}}/jquery.dataTables.min.js"></script>
+    <script src="{{asset('assets/js')}}/jquery.counterup.min.js"></script>
+    <script src="{{asset('assets/js')}}/moment.min.js"></script>
+    <script src="{{asset('assets/js')}}/jquery.waypoints.min.js"></script>
 @endsection
 

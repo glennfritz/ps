@@ -155,10 +155,10 @@
 @endsection
 
 @section('script')
-    <script src="{{asset('public/assets/js')}}/Chart.min.js"></script>
-    <script src="{{asset('public/assets/js')}}/jquery.counterup.min.js"></script>
-    <script src="{{asset('public/assets/js')}}/moment.min.js"></script>
-    <script src="{{asset('public/assets/js')}}/jquery.waypoints.min.js"></script>
+    <script src="{{asset('assets/js')}}/Chart.min.js"></script>
+    <script src="{{asset('assets/js')}}/jquery.counterup.min.js"></script>
+    <script src="{{asset('assets/js')}}/moment.min.js"></script>
+    <script src="{{asset('assets/js')}}/jquery.waypoints.min.js"></script>
     <script>
         /*-------------------------------------
           Doughnut Chart

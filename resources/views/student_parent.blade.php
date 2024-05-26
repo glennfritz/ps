@@ -5,9 +5,9 @@
 @endsection
 
 @section('style')
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/select2.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/datepicker.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/select2.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/datepicker.min.css">
 @endsection
 
 
@@ -62,31 +62,31 @@
     <!-- Student Table Area End Here -->
 @endsection
 @section('script')
-    <script src="{{asset('public/assets/js')}}/jquery.dataTables.min.js"></script>
-    <script src="{{asset('public/assets/js')}}/select2.min.js"></script>
-    <script src="{{asset('public/assets/js')}}/datepicker.min.js"></script>
+    <script src="{{asset('assets/js')}}/jquery.dataTables.min.js"></script>
+    <script src="{{asset('assets/js')}}/select2.min.js"></script>
+    <script src="{{asset('assets/js')}}/datepicker.min.js"></script>
 @section('script')
-    <script src="{{asset('public/assets/js')}}/jquery.dataTables.min.js"></script>
+    <script src="{{asset('assets/js')}}/jquery.dataTables.min.js"></script>
     <script>
         function print() {
             var printContents = $('#layout').html();
             var title = $('#title').html();
             w = window.open();
             w.document.write('<html><head>');
-            w.document.write('<link rel="stylesheet" href="{{asset('public/assets/css')}}/normalize.css" type="text/css" />');
-            w.document.write('<link rel="stylesheet" href="{{asset('public/assets/css')}}/bootstrap.min.css" type="text/css" />');
-            w.document.write('<link rel="stylesheet" href="{{asset('public/assets/css')}}/style.css" type="text/css" />');
+            w.document.write('<link rel="stylesheet" href="{{asset('assets/css')}}/normalize.css" type="text/css" />');
+            w.document.write('<link rel="stylesheet" href="{{asset('assets/css')}}/bootstrap.min.css" type="text/css" />');
+            w.document.write('<link rel="stylesheet" href="{{asset('assets/css')}}/style.css" type="text/css" />');
             w.document.write('<style>');
             w.document.write('#DataTables_Table_0_filter{display: none;} button {display: none ;}input {display: none; } .btn{display :none;}a{display: none;}');
             w.document.write('</style>');
             w.document.write('</head><body>');
-            w.document.write('<img class="image-fluid" src="{{asset('public/assets/img')}}/header.png" />');
+            w.document.write('<img class="image-fluid" src="{{asset('assets/img')}}/header.png" />');
             w.document.write('<table>');
             w.document.write(printContents);
             w.document.write('</table>');
             w.document.write('</body>');
-            w.document.write('<scr' + 'ipt src="{{asset('public/assets/js')}}/jquery-3.3.1.min.js" type="text/javascript">' + '</sc' + 'ript>');
-            w.document.write('<scr' + 'ipt src="{{asset('public/assets/js')}}/bootstrap.min.js" type="text/javascript">' +'</sc' + 'ript>');
+            w.document.write('<scr' + 'ipt src="{{asset('assets/js')}}/jquery-3.3.1.min.js" type="text/javascript">' + '</sc' + 'ript>');
+            w.document.write('<scr' + 'ipt src="{{asset('assets/js')}}/bootstrap.min.js" type="text/javascript">' +'</sc' + 'ript>');
             //w.document.write('<scr' + 'ipt type="text/javascript">' + 'window.onload = function() { window.print(); window.close(); };' + '</sc' + 'ript>');
             w.document.write('</html>');
             w.document.close();

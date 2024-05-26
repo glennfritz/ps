@@ -5,7 +5,7 @@
 @endsection
 
 @section('style')
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/jquery.dataTables.min.css">
 @endsection
 
 @section('section')
@@ -52,7 +52,7 @@
                                 <div class="d-none">
                                     <div id="hello{{$payment->id}}" class="eachrec">
                                                 <div style="height:120px; width:95% " >
-                                                    <img src="{{asset('public/assets/img')}}/header.png" />
+                                                    <img src="{{asset('assets/img')}}/header.png" />
                                                 </div>
                                                 <div style=" float:left; width:550px; margin-top:17px;TEXT-ALIGN:CENTER;  height:34px;font-size:24px; ">
                                                     CASH RECEIPT
@@ -134,6 +134,6 @@
 @endsection
 
 @section('script')
-    <script src="{{asset('public/assets/js')}}/jquery.dataTables.min.js"></script>
+    <script src="{{asset('assets/js')}}/jquery.dataTables.min.js"></script>
 
 @endsection

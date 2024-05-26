@@ -86,12 +86,12 @@
     var printContents = $('#layout{{$i++}}').html();
     w = window.open();
     w.document.write('<html><head>');
-    w.document.write('<link rel="stylesheet" href="{{asset('public/assets/css')}}/normalize.css" type="text/css" />');
-    w.document.write('<link rel="stylesheet" href="{{asset('public/assets/css')}}/main.css" type="text/css" />');
-    w.document.write('<link rel="stylesheet" href="{{asset('public/assets/css')}}/bootstrap.min.css" type="text/css" />');
-    w.document.write('<link rel="stylesheet" href="{{asset('public/assets/css')}}/all.min.css" type="text/css" />');
-    w.document.write('<link rel="stylesheet" href="{{asset('public/assets/fonts')}}/flaticon.css" type="text/css" />');
-    w.document.write('<link rel="stylesheet" href="{{asset('public/assets/css')}}/style.css" type="text/css" />');
+    w.document.write('<link rel="stylesheet" href="{{asset('assets/css')}}/normalize.css" type="text/css" />');
+    w.document.write('<link rel="stylesheet" href="{{asset('assets/css')}}/main.css" type="text/css" />');
+    w.document.write('<link rel="stylesheet" href="{{asset('assets/css')}}/bootstrap.min.css" type="text/css" />');
+    w.document.write('<link rel="stylesheet" href="{{asset('assets/css')}}/all.min.css" type="text/css" />');
+    w.document.write('<link rel="stylesheet" href="{{asset('assets/fonts')}}/flaticon.css" type="text/css" />');
+    w.document.write('<link rel="stylesheet" href="{{asset('assets/css')}}/style.css" type="text/css" />');
     w.document.write('</head><body>');
     w.document.write(printContents);
     w.document.write('</body>');

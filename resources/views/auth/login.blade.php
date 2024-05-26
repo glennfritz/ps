@@ -7,16 +7,16 @@
     <title>{{env('APP_NAME','Laravel')}}  @yield('title')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('public/assets/img')}}/favicon.png">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/normalize.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/main.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/bootstrap.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/all.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets')}}/toastr/toastr.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/fonts')}}/flaticon.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/animate.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/style.css">
-    <script src="{{asset('public/assets/js')}}/modernizr-3.6.0.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img')}}/favicon.png">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/normalize.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/main.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/all.min.css">
+    <link rel="stylesheet" href="{{asset('assets')}}/toastr/toastr.min.css">
+    <link rel="stylesheet" href="{{asset('assets/fonts')}}/flaticon.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/animate.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/style.css">
+    <script src="{{asset('assets/js')}}/modernizr-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
     <div class="login-page-content">
         <div class="login-box">
             <div class="item-logo">
-                <img style="height:80px" src="{{asset('public/assets/img')}}/logo2.png" alt="logo">
+                <img style="height:80px" src="{{asset('assets/img')}}/logo2.png" alt="logo">
             </div>
             <form action="{{route('login.submit')}}" method="post" class="login-form">
                 @csrf
@@ -52,13 +52,13 @@
             </form>
     </div>
 </div>
-<script src="{{asset('public/assets/js')}}/jquery-3.3.1.min.js"></script>
-<script src="{{asset('public/assets/js')}}/plugins.js"></script>
-<script src="{{asset('public/assets/js')}}/popper.min.js"></script>
-<script src="{{asset('public/assets/js')}}/bootstrap.min.js"></script>
-<script src="{{asset('public/assets/js')}}/jquery.scrollUp.min.js"></script>
-<script src="{{asset('public/assets/js')}}/main.js"></script>
-<script src="{{asset('public/assets')}}/toastr/toastr.min.js"></script>
+<script src="{{asset('assets/js')}}/jquery-3.3.1.min.js"></script>
+<script src="{{asset('assets/js')}}/plugins.js"></script>
+<script src="{{asset('assets/js')}}/popper.min.js"></script>
+<script src="{{asset('assets/js')}}/bootstrap.min.js"></script>
+<script src="{{asset('assets/js')}}/jquery.scrollUp.min.js"></script>
+<script src="{{asset('assets/js')}}/main.js"></script>
+<script src="{{asset('assets')}}/toastr/toastr.min.js"></script>
 <script>
     // $("#password").password('toggle');
     @if(Session::has('success'))

@@ -5,7 +5,7 @@
 @endsection
 
 @section('style')
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/jquery.dataTables.min.css">
 @endsection
 
 @section('section')

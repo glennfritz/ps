@@ -1,7 +1,7 @@
 @extends('layout.base')
 
 @section('style')
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/jquery.dataTables.min.css">
 @endsection
 
 @section('section')
@@ -53,5 +53,5 @@
 @endsection
 
 @section('script')
-    <script src="{{asset('public/assets/js')}}/jquery.dataTables.min.js"></script>
+    <script src="{{asset('assets/js')}}/jquery.dataTables.min.js"></script>
 @endsection

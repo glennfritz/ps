@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/main.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/bootstrap.min.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/style.css">
-    <link rel="stylesheet" href="{{asset('public/assets/css')}}/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/main.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/style.css">
+    <link rel="stylesheet" href="{{asset('assets/css')}}/jquery.dataTables.min.css">
 </head>
 
 <body>
@@ -28,11 +28,11 @@
     </div>
 </div>
 
-<script src="{{asset('public/assets/js')}}/jquery-3.3.1.min.js"></script>
-<script src="{{asset('public/assets/js')}}/plugins.js"></script>
-<script src="{{asset('public/assets/js')}}/popper.min.js"></script>
-<script src="{{asset('public/assets/js')}}/bootstrap.min.js"></script>
-<script src="{{asset('public/assets/js')}}/jquery.dataTables.min.js"></script>
+<script src="{{asset('assets/js')}}/jquery-3.3.1.min.js"></script>
+<script src="{{asset('assets/js')}}/plugins.js"></script>
+<script src="{{asset('assets/js')}}/popper.min.js"></script>
+<script src="{{asset('assets/js')}}/bootstrap.min.js"></script>
+<script src="{{asset('assets/js')}}/jquery.dataTables.min.js"></script>
 </body>
 
 </html>
